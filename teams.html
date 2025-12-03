@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teams · Rosebel Street Soccer</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body data-page="teams">
+
+<nav class="topnav">
+  <div class="brand">Rosebel Street Soccer</div>
+  <ul>
+    <li><a href="index.html">Dashboard</a></li>
+    <li><a href="teams.html" class="active">Teams</a></li>
+    <li><a href="players.html">Players</a></li>
+    <li><a href="matches.html">Matches</a></li>
+    <li><a href="standings.html">Standings</a></li>
+    <li><a href="knockout.html">Knockout</a></li>
+  </ul>
+</nav>
+
+<header class="page-header"><h1>Manage Teams</h1></header>
+<main class="container">
+  <section class="card">
+    <form id="teamForm" class="grid grid-2">
+      <div>
+        <label for="teamName">Team Name</label>
+        <input id="teamName" placeholder="e.g., Admin" required>
+      </div>
+      <div>
+        <label for="teamLogo">Team Logo</label>
+        <input id="teamLogo" type="file" accept="image/*">
+      </div>
+      <div class="full"><button type="submit" class="btn primary">Add Team</button></div>
+    </form>
+  </section>
+
+  <section class="card">
+    <h2>Teams</h2>
+    <div id="teamList" class="teams-list"></div>
+  </section>
+</main>
+
+<div class="modal" id="teamModal">
+  <div class="modal-content">
+    <h3>Edit Team</h3>
+    <form id="editTeamForm" class="grid grid-2">
+      <input type="hidden" id="editTeamId">
+      <div><label for="editTeamName">Name</label><input id="editTeamName" required></div>
+      <div><label for="editTeamLogo">Logo</label><input id="editTeamLogo" type="file" accept="image/*"></div>
+      <div class="full actions">
+        <button type="button" class="btn sm" id="closeTeamModal">Cancel</button>
+        <button type="submit" class="btn sm primary">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>
