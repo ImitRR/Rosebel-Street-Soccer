@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard · Rosebel Street Soccer</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body data-page="dashboard">
+<nav class="topnav">
+  <div class="brand">Rosebel Street Soccer</div>
+  <ul>
+    <li><a href="index.html" class="active">Dashboard</a></li>
+    <li><a href="teams.html">Teams</a></li>
+    <li><a href="players.html">Players</a></li>
+    <li><a href="matches.html">Matches</a></li>
+    <li><a href="standings.html">Standings</a></li>
+    <li><a href="knockout.html">Knockout</a></li>
+  </ul>
+</nav>
+<header class="page-header"><h1>Dashboard</h1></header>
+<main class="container">
+  <section class="card" id="summary">
+    <h2>Tournament Summary</h2>
+    <div class="grid">
+      <div class="stat"><div class="stat-value" id="statTeams">0</div><div class="stat-label">Teams</div></div>
+      <div class="stat"><div class="stat-value" id="statPlayers">0</div><div class="stat-label">Players</div></div>
+      <div class="stat"><div class="stat-value" id="statMatches">0</div><div class="stat-label">Matches</div></div>
+    </div>
+  </section>
+  <section class="card">
+    <h2>Reset Everything</h2>
+    <button class="btn sm danger" id="resetAllBtn">Delete All Data</button>
+  </section>
+  <section class="card">
+    <h2>Backup & Restore</h2>
+    <div class="grid grid-2">
+      <div>
+        <button class="btn sm primary" id="exportBtn">Download Backup (.json)</button>
+      </div>
+      <div>
+        <input type="file" id="importFile" accept=".json" style="display:none;">
+        <button class="btn sm" id="importBtn">Choose File to Restore</button>
+        <div id="importFileName" style="margin-top:.4rem;font-size:.85rem;color:#aaa;">No file selected</div>
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
