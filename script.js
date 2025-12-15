@@ -21,7 +21,7 @@ const GITHUB_PATH = 'data.json';
 function initGitHubConfig() {
   if (!GITHUB_TOKEN || !GITHUB_REPO) {
     // HARDCODED FOR YOUR SETUP - REMOVE THIS BLOCK AFTER FIRST LOAD FOR SECURITY
-    localStorage.setItem('ghToken', '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');
+    localStorage.setItem('ghToken', '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');
     localStorage.setItem('ghRepo', 'imitrr/Rosebel-Street-Soccer');
     GITHUB_TOKEN = localStorage.getItem('ghToken');
     GITHUB_REPO = localStorage.getItem('ghRepo');
