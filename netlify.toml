@@ -1,0 +1,40 @@
+# Netlify configuration file
+# Build and deployment settings for the Rosebel Street Soccer project
+
+[build]
+  # Directory to deploy from
+  publish = "public"
+  
+  # Build command
+  command = "npm run build"
+  
+  # Functions directory
+  functions = "functions"
+
+[build.environment]
+  # Environment variables for the build
+  NODE_VERSION = "18"
+
+# Redirect rules
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Cache settings
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Development settings
+[dev]
+  # Port for local development
+  port = 8888
+  # Command to run in dev mode
+  command = "npm run dev"
