@@ -1,0 +1,30 @@
+{
+  "name": "rosebel-street-soccer",
+  "version": "1.0.0",
+  "description": "Rosebel Street Soccer project with GitHub API integration using Octokit",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest",
+    "dev": "node --watch index.js"
+  },
+  "keywords": [
+    "github",
+    "api",
+    "octokit",
+    "soccer"
+  ],
+  "author": "ImitRR",
+  "license": "MIT",
+  "dependencies": {
+    "@octokit/rest": "^20.0.0",
+    "@octokit/core": "^5.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "dotenv": "^16.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
